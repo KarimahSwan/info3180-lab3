@@ -41,7 +41,7 @@ def contact():
             mail.send(msg)
 
             flash('Form sucessfully completed!','success')
-            return render_template('home.html', name=name,email=email,subject=subject,message=message)
+            return redirect(url_for('home'))
         
         flash("Please fill out all fields appropriately")
         flash_errors(form)
